@@ -25,9 +25,9 @@
         card-small(:data="data.result[6]")
 
       .popular-end
-          strong Oopsreview 
+          strong Xiaomiverse 
           br 
-          | We are software review specialist
+          | Everything about Xiaomi
 </template>
 
 <script lang="ts">

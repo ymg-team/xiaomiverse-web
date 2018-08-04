@@ -21,17 +21,27 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { router } from '../index'
+import Vue from "vue"
+import { router } from "../index"
 
-const popular_tags = ['Android', 'iOS', 'Web', 'Windows', 'MacOS', 'Linux', 'Games', 'Developer']
+const popular_tags = [
+  "News",
+  "Mi Phones",
+  "Redmi Phones",
+  "Mi TV",
+  "Smart Devices",
+  // "Mi Power Bank",
+  "Accesories",
+  "Audio",
+  // "Smart Live"
+]
 
 export default Vue.extend({
-  name: 'navbar',
+  name: "navbar",
   data() {
     return {
       search: false,
-      search_text: '',
+      search_text: "",
       show_navbar: false,
       popular_tags
     }
@@ -40,15 +50,15 @@ export default Vue.extend({
   props: {
     keyword: {
       type: String,
-      default: ''
+      default: ""
     }
   },
 
   watch: {
     keyword(nv, ov) {
-      if(nv == '') {
-        this.search = false 
-        this.search_text = ''
+      if (nv == "") {
+        this.search = false
+        this.search_text = ""
       }
     }
   },
@@ -56,31 +66,33 @@ export default Vue.extend({
   methods: {
     toggleSearch() {
       this.search = !this.search
-      if(this.search === true) {
+      if (this.search === true) {
         setTimeout(() => {
-          const search_input:HTMLElement | null = document.getElementById('search-input')
-          if(search_input) search_input.focus()
+          const search_input: HTMLElement | null = document.getElementById(
+            "search-input"
+          )
+          if (search_input) search_input.focus()
         }, 300)
       } else {
-        this.search_text = ''
+        this.search_text = ""
         // if close on route /search - redirect to home
-        if (this.$route.name == 'search') router.push({path: `/`})
+        if (this.$route.name == "search") router.push({ path: `/` })
       }
     },
 
     handleChangeSearch(e: KeyboardEvent) {
-      if(e.keyCode == 13 && this.search_text != '') {
-        router.push({path: `/search?q=${this.search_text}`})
+      if (e.keyCode == 13 && this.search_text != "") {
+        router.push({ path: `/search?q=${this.search_text}` })
       }
     },
 
     handleScroll() {
-      document.addEventListener('scroll', (e) => {
+      document.addEventListener("scroll", e => {
         const position = window.scrollY
-        if(position > 218) {
+        if (position > 218) {
           // show navbar
           this.show_navbar = true
-        }else {
+        } else {
           // hide navbar
           this.show_navbar = false
         }
@@ -90,7 +102,7 @@ export default Vue.extend({
 
   mounted() {
     // user is doing search, and access /search page
-    if(this.keyword != '') {
+    if (this.keyword != "") {
       this.search_text = this.keyword
       this.search = true
     }
@@ -103,9 +115,9 @@ export default Vue.extend({
 <style lang="sass" scoped>
   @import '../../design/sass/color'
   nav 
-    background-color: #000
-    border-top: 1px solid $color-gray-medium
-    border-bottom: 1px solid $color-gray-medium
+    background-color: $color-orange-main
+    border-top: 1px solid $color-white-main
+    border-bottom: 1px solid $color-white-main
     .fixed
       &.hide
         top: -150px  
@@ -133,7 +145,7 @@ export default Vue.extend({
           font-size: 1em
           letter-spacing: 1.5px
           &:hover 
-            color: $color-gray-dark
+            color: $color-gray-verysoft
     .left
       overflow-x: auto
       display: inline-flex
@@ -145,9 +157,15 @@ export default Vue.extend({
     ul.search
       margin: 0
       padding: .25em 0
-      input[type='text']
+      input#search-input
         &:focus
           outline: none
+        &::placeholder 
+          color: #FFF
+        &:-ms-input-placeholder
+          color: #FFF
+        &::-ms-input-placeholder
+          color: #FFF
         width: 100%
         background: transparent
         border: none

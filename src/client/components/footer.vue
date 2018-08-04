@@ -4,26 +4,26 @@
       .grid
         .col-6_sm-12
           .link-collection 
-            router-link(to='/static/about') About Oopsreview 
+            router-link(to='/static/about') About Xiaomiverse 
             | |&nbsp;
             router-link(to='/static/terms-conditions') Terms and Conditions 
             | |&nbsp;
             router-link(to='/static/privacy-policy') Privacy Policy 
             | |&nbsp;
-            a(href='https://docs.google.com/forms/d/e/1FAIpQLSeUxc711pgVvbbz-U3ljhaFe11HL4yCK1vPdCOhtWfKlBozuQ/viewform' target="_blank") Contact Us
+            a(href='https://docs.google.com/forms/d/e/1FAIpQLSdMYGqoL0uP6QOBJjyn-6ewhlBKB3iWl4TqZEp71JZlWhqskw/viewform' target="_blank") Contact Us
           p
-            strong Oopsreview 
-            | Software Review Specialist
+            strong Xiaomiverse 
+            | Everything about Xiaomi
             br 
             | Powered by 
             a(href='https://byidmore.com' target='_blank') IdMore
         .col-6_sm-12
           .link-social
-            a(href="https://facebook.com/oopsreview" target="_blank")
+            a(href="https://facebook.com/xiaomiverse" target="_blank")
               span.icono-facebook
-            a(href="https://twitter.com/oopsreview" target="_blank")
+            a(href="https://twitter.com/xiaomiverse" target="_blank")
               span.icono-twitter 
-            a(href="https://oopsreview.com/feed" target="_blank")
+            a(href="https://xiaomiverse.com/feed" target="_blank")
               span.icono-rss 
 
     // go to top button

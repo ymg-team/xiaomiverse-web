@@ -1,4 +1,4 @@
 export default {
-  title: 'Oopsreview - Specialist Software Review',
-  description: 'Oopsreview review some of the various platform applications available on the market, to help you decide whether to use the app or not.'
+  title: 'Xiaomiverse - Everything about Xiaomi',
+  description: 'Find various updates about Xiaomi products that have been released on the market. We will also review some of these products for you.'
 }
