@@ -1,9 +1,9 @@
 {
-  "name": "Oopsreview",
-  "short_name": "Oopsreview",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "display": "browser",
+  "name": "Xiaomiverse",
+  "short_name": "Xiaomiverse",
+  "theme_color": "#d35400",
+  "background_color": "#2196f3",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "icons": [

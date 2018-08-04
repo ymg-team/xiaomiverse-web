@@ -4,7 +4,7 @@
       .grid
         .col.align-center
           router-link(to='/')
-            img.logo#logo(src='/images/logo-wide-2.png')
+            img.logo#logo(src='/images/logo-wide.png')
 </template>
 
 <script lang="ts">
@@ -26,12 +26,14 @@ export default Vue.extend({
 </script>
 
 <style lang="sass" scoped>
+@import '../../design/sass/color'
+
 header 
   &.small 
     padding: 1em 0
     img.logo 
       height: 80px
-  background: #000
+  background: $color-black-main
   padding: 4em 0
   img.logo
     max-width: 100%
